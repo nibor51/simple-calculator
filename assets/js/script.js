@@ -62,10 +62,14 @@ for (let i = 0; i < keypadButtonsArray.length; i++) {
 
 for (let i = 0; i < keypadOperatorsArray.length; i++) {
     keypadOperatorsArray[i].addEventListener('click', function () {
-        if (display.textContent.includes('+') || display.textContent.includes('-') || display.textContent.includes('x') || display.textContent.includes('/')) {
-            display.textContent = display.textContent.slice(0, -1) + this.textContent;
-        } else {
-            display.textContent += this.textContent;
+        for (let j = 0; j < keypadOperators.length; j++) {
+            if (display.textContent.includes(keypadOperators[j]) === false) {
+                display.textContent += this.textContent;
+                break;
+            } else if (display.textContent.charAt(display.textContent.length - 1) === keypadOperators[j]) {
+                display.textContent = display.textContent.slice(0, -1) + this.textContent;
+                break;
+            }
         }
     });
 }
