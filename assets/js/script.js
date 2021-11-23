@@ -59,14 +59,21 @@ for (let i = 0; i < keypadButtonsArray.length; i++) {
         }
     });
 }
+
 for (let i = 0; i < keypadOperatorsArray.length; i++) {
     keypadOperatorsArray[i].addEventListener('click', function () {
-                display.textContent += this.textContent;
+        if (display.textContent.includes('+') || display.textContent.includes('-') || display.textContent.includes('x') || display.textContent.includes('/')) {
+            display.textContent = display.textContent.slice(0, -1) + this.textContent;
+        } else {
+            display.textContent += this.textContent;
+        }
     });
 }
+
 keypadClearButton.addEventListener('click', function () {
     display.textContent = '0';
 });
+
 keypadEqualsButton.addEventListener('click', function () {
     if (display.textContent.includes('x')) {
         display.textContent = display.textContent.replace('x', '*');
@@ -75,4 +82,3 @@ keypadEqualsButton.addEventListener('click', function () {
     let result = eval(expression);
     display.textContent = result;
 });
-
