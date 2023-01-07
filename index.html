@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="calculator">
-            <div class="calculator-display">
-                <div class="display">0</div>
-            </div>
-            <div class="calculator-keypad">
-                <div class="keypad">
-                    <div class="keypad-row">
-                        <div class="keypad-button keypad-button-clear">C</div>
-                        <div class="keypad-button keypad-button-divide">/</div>
-                        <div class="keypad-button keypad-button-multiply">x</div>
-                        <div class="keypad-button keypad-button-subtract">-</div>
-                    </div>
-                    <div class="keypad-row">
-                        <div class="keypad-button keypad-button-seven">7</div>
-                        <div class="keypad-button keypad-button-eight">8</div>
-                        <div class="keypad-button keypad-button-nine">9</div>
-                        <div class="keypad-button keypad-button-add">+</div>
-                    </div>
-                    <div class="keypad-row">
-                        <div class="keypad-button keypad-button-four">4</div>
-                        <div class="keypad-button keypad-button-five">5</div>
-                        <div class="keypad-button keypad-button-six">6</div>
-                        <div class="keypad-button keypad-button-equals">=</div>
-                    </div>
-                    <div class="keypad-row">
-                        <div class="keypad-button keypad-button-one">1</div>
-                        <div class="keypad-button keypad-button-two">2</div>
-                        <div class="keypad-button keypad-button-three">3</div>
-                        <div class="keypad-button keypad-button-zero">0</div>
-                    </div>
-                    <div class="keypad-row">
-                        <div class="keypad-button keypad-button
-                        keypad-button-decimal">.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="keypad">
+      <button class="keypad-button keypad-button-clear" id="keypad-button-clear">AC</button>
+      <button class="keypad-button keypad-button-operator" id="keypad-button-divide">/</button>
+      <button class="keypad-button keypad-button-operator" id="keypad-button-multiply">x</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-seven">7</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-eight">8</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-nine">9</button>
+      <button class="keypad-button keypad-button-operator" id="keypad-button-subtract">-</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-four">4</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-five">5</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-six">6</button>
+      <button class="keypad-button keypad-button-operator" id="keypad-button-add">+</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-one">1</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-two">2</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-three">3</button>
+      <button class="keypad-button keypad-button-equals" id="keypad-button-equals">=</button>
+      <button class="keypad-button keypad-button-number" id="keypad-button-zero">0</button>
+      <button class="keypad-button keypad-button-decimal" id="keypad-button-decimal">.</button>
     </div>
-    <script src="assets/js/script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
